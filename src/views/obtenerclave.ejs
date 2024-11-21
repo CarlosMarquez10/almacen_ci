@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="continer-login">
+      <div class="container-login_imagen">
+        <img class="login-logo" src="/img/CONSORCIO_CI.png" alt="">
+      </div>
+      <div class="container-login_form-clave">
+        <!-- hacer un formulario de login con los campos de usuario y clave -->
+         <form class="container-login_formulario" action="/login" method="POST">
+          <input type="text" name="username" placeholder="Usuario" required>
+          <input type="password" name="password" placeholder="Nueva Clave" required>
+            <button class="container-login_btn-clave" type="submit" value="Registrar">Registrar</button>
+        </form>
+
+
+      </div>
+      <div class="container-login_obtenerClave">
+        <a href="/login">Volver al Inicio</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+/* Variables de colores */
+:root {
+  --color-navbar-bg: rgba(255, 255, 255, 0.2); /* Blanco semi-transparente */
+  --color-navbar-hover: #f1a0437a;
+  --color-navbar-link: black;
+  --color-dropdown-bg: transparent;
+  --color-dropdown-hover: transparent;
+  --color-dropdown-link: black;
+  --color-form-bg: green;
+  --color-button-text: #202020;
+}
+
+/* Estilos generales */
+body {
+  width: 100vw;
+  margin: 0;
+  display: flex;
+}
+
+/* Posicionar el botón del menú */
+.menu-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  /* margin-left: 1rem; */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  /* background-color: pink */
+}
+
+.menu-button .img-navbar {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover{
+    transform: scale(1.3);
+    filter: drop-shadow(2px 3px 5px rgba(32, 28, 16, 0.555));
+  }
+}
+
+/* Navbar sin efecto por defecto */
+.navbar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%); /* Oculta la navbar fuera de la pantalla */
+  transition: transform 0.3s ease;
+  background-color: var(--color-navbar-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 5;
+  pointer-events: none;
+  /* transition: background-color 0.3s ease, backdrop-filter 0.3s ease; */
+}
+
+.navbar .dropbtn {
+  pointer-events: auto; /* Permite clics en el botón del menú */
+  z-index: 1; /* Asegura que esté por encima de otros elementos */
+  position: relative; /* Ajusta según sea necesario */
+}
+
+/* Clase que aplica el efecto */
+.navbar.frosted {
+  transform: translateX(0);
+  background-color: var(--color-navbar-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.navbar img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.navbar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.navbar .menu a {
+  color: var(--color-navbar-link);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transform: scale(0.95);
+  transition: transform 0.95s ease;
+  text-align: left;
+}
+
+.navbar .menu a:hover {
+  background-color: var(--color-navbar-hover);
+  border-radius: 5px;
+  transform: scale(1.1);
+  transition: transform 0.7s ease;
+}
+
+/* Menú desplegable */
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+
+.dropbtn {
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--color-navbar-link);
+  text-decoration: none;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  pointer-events: auto;
+  z-index: 10; /* Asegúrate de que sea mayor que otros elementos */
+  position: fixed; /* O absolute, según necesites */
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 3.7rem;
+  /* padding-left: 0.1rem; */
+  background-color: var(--color-dropdown-bg);
+  min-width: 100%;
+  left: 0;
+  top: 100%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mostrar el contenido cuando la navbar tiene la clase 'frosted' */
+.navbar.frosted .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  position: relative;
+  pointer-events: auto;
+}
+
+.dropdown-content.visible {
+  display: block;
+  pointer-events: auto;
+}
+
+.dropdown-content a {
+  color: var(--color-dropdown-link);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+  transform: scale(0.9);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos específicos de formularios */
+.Registro-form__main {
+  width: calc(100% - 300px); /* Ajustar ancho por el navbar */
+  margin-left: 300px; /* Mover contenido principal hacia la derecha */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-form-bg);
+  z-index: 1;
+}
+
+.from-Registro__Novedad {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnfrom-registro {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-form-bg);
+  color: var(--color-button-text);
+}
+
+/* estilos para la imagen */
+
+.cont-inicio {
+  width: 100%;
+  height: 60px;
+  padding-left: 1.3rem;
+  /* background-color: green; */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* position: relative; */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.cont-inicio {
+  opacity: 0;
+  transform: translateY(-10px); /* Desplazamiento inicial para el efecto */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estilos para mostrar los elementos cuando la navbar está activa */
+.navbar.frosted .cont-inicio {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar.frosted .cont-inicio:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.navbar.frosted .cont-inicio:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.navbar.frosted .cont-inicio:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.navbar.frosted .cont-inicio:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.navbar.frosted .cont-inicio:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.navbar.frosted .cont-inicio:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.cont-inicio img {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  margin-right: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+.cont-inicio a {
+  font-size: 18px;
+  color: var(--color-navbar-link);
+  text-decoration: none;
+}
+
+.img-navbar {
+  width: 60px;
+  height: 30px;
+  padding: 0px;
+  margin: 10px 0px 0px 10px;
+}
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 250px;
+    padding: 15px 5px;
+  }
+
+  .navbar .menu a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .Registro-form__main {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+  }
+
+  .menu-button .img-navbar {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container-inicio_btn {
+    /* background-color: orange;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center; */
+    margin-bottom: 20px; /* Añadir separación */
+  }
+  
+  
+  .card {
+    width: 290px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 20px; /* Espacio entre cards */
+  }
+  
+  .card:first-of-type {
+    margin-top: 40px; /* Separación entre la primera card y los botones */
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .product-quantity {
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .modal-btn {
+    background-color: #ddd;
+  }
+  
+  .check-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .change-btn {
+    background-color: orange;
+    color: white;
+  }
+  
+  .charge-btn {
+    background-color: rgb(248, 191, 191);
+    color: white;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 350px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 85%;
+    height: 100px;
+    margin-bottom: 15px;
+    resize: none;
+    padding: 10px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 18px;
+  }
+  
+  .save-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: rgb(7, 143, 233);
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: red;
+    color: white;
+  }
+  

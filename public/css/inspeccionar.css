@@ -1,0 +1,51 @@
+.container-inspeccion-btn{
+    width: 300px;
+    height: 70%;
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: pink; */
+}
+
+.btn-inspecionar_cargo,
+.btn-inspeccionar-devolver,
+.btn-inspeccionar-pendiente {
+    width: 50%;
+    height: 35px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.control-btn img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-inspecionar_cargo{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(255, 153, 51);
+    transition: all 0.5s ease; 
+
+    &:hover{
+        background-color: rgb(255, 191, 102);
+        transform: scale(1.09);
+    }
+}
+
+.btn-inspeccionar-devolver{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(6, 117, 190);
+    transition: all 0.5s ease; 
+
+    &:hover{
+        background-color: rgb(9, 139, 219);
+        transform: scale(1.09);
+        box-shadow: 0 5px 15px rgba(37, 32, 19, 0.459);
+    }
+}

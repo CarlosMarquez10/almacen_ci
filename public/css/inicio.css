@@ -1,0 +1,52 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img_logo {
+  margin: 0;
+  width: 17rem;
+  height: 15rem;
+  background-image: url('/img/CONSORCIO_CI.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  animation: fadeIn 6s ease-out forwards;
+}
+
+/* Animación para la ventana inicial */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .ventana-inicio {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1; /* Fondo de la ventana */
+    animation: fadeIn 6s ease-out;
+  
+  }
+  
+  .ventana-inicio h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .img_logo{
+    opacity: 1;
+  } 

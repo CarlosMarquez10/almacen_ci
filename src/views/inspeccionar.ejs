@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/consultar.css">
+    <link rel="stylesheet" href="/css/inspeccionar.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <title>Inspeccionar</title>
+  </head>
+  <body>
+    <div class="container-inicio_header">
+      <%- include('./components/navbar.ejs') %>
+      <%- include('./components/estadoEmpleado.ejs') %>
+     </div>
+
+     <div class="container-inicio_card">
+      <%- include('./components/cardEmpleado.ejs') %>
+     </div>
+
+     <div class="container-inicio_inspeccionar">
+      <!-- Formulario de inspección -->
+      <!--... -->
+      <div class="container-inspeccion-btn">
+          <button type="submit" class="btn-inspecionar_cargo">Asignar</button>
+          <button type="submit" class="btn-inspeccionar-devolver">Devolver</button>
+      </div>
+     </div>
+
+         <!-- contenido principal -->
+    <div class="container-inicio">
+      <div class="container-inicio_card">
+        <div class="container-inicio_btn">
+          <button type="button" class="container-inicio_btnHerramienta"><img src="/img/herramienta.png" alt=""></button>
+          <button type="button" class="container-inicio_btnHerramienta"><img src="/img/botiquin.png" alt=""></button>
+          <button type="button" class="container-inicio_btnHerramienta"><img src="/img/dotacion.png" alt=""></button>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Destornillador de pala</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Destornillador de pala</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Destornillador de pala</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Destornillador de pala</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Pinzas VoltiAmperimetrica</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Alicate 1000V</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="product-name">Destornillador de estrella</span>
+            <span class="product-quantity">1</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn modal-btn control-btn"><img src="/img/mensaje.png" alt=""></button>
+            <button class="btn check-btn control-btn" data-value="buen estado"><img src="/img/comprobado.png" alt=""></button>
+            <button class="btn change-btn control-btn" data-value="cambiar"><img src="/img/lazo.png" alt=""></button>
+            <button class="btn charge-btn control-btn" data-value="cobrar"><img src="/img/sueldo.png" alt=""></button>
+          </div>
+        
+          <!-- Modal único para esta card -->
+          <div class="modal">
+            <div class="modal-content">
+              <button class="modal-close control-btn"><img src="/img/borrar-salir.png" alt=""></button>
+              <textarea placeholder="Escribe un mensaje..."></textarea>
+              <div class="modal-actions">
+                <button class="btn save-btn control-btn"><img src="/img/disquete.png" alt=""></button>
+                <button class="btn edit-btn control-btn"><img src="/img/editar.png" alt=""></button>
+                <button class="btn delete-btn control-btn"><img src="/img/borrar.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+    
+    
+      </div>
+    </div>
+  <script src="/js/card.js"></script>
+  </body>
+</html>

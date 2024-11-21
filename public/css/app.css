@@ -1,0 +1,15 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img_logo {
+  margin: 0;
+  width: 17rem;
+  height: 15rem;
+}
+

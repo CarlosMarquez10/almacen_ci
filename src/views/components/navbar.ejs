@@ -1,0 +1,63 @@
+<!-- src/views/mod/navbar.ejs -->
+<link rel="stylesheet" href="/css/navbar.css" />
+
+<!-- Botón del menú fuera de la navbar -->
+<div class="menu-button">
+  <img
+    src="/img/menu.png"
+    alt=""
+    class="dropbtn img-navbar"
+    onclick="toggleDropdown(event)"
+  />
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="menu">
+    <div class="dropdown">
+      <div class="dropdown-content">
+        <div class="cont-inicio">
+          <img src="/img/user.png" alt="" />
+          <a href="consultar">Consultar</a>
+        </div>
+        <div class="cont-inicio">
+          <img src="/img/Inspeccionar.png" alt="" />
+          <a href="inspeccionar">Inspeccionar</a>
+        </div>
+        <div class="cont-inicio">
+          <img src="/img/almacen.png" alt="" />
+          <a href="almacen">Almacen</a>
+        </div>
+        <div class="cont-inicio">
+          <img src="/img/Documentos.png" alt="" />
+          <a href="Documentos">Documentos</a>
+        </div>
+        <div class="cont-inicio">
+          <img src="/img/Estadisticas.png" alt="" />
+          <a href="Estadisticas">Estadísticas</a>
+        </div>
+        <div class="cont-inicio">
+          <img src="/img/salir.png" alt="" />
+          <a href="/salir/">Salir</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para el menú desplegable -->
+<script>
+  function toggleDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("frosted");
+  }
+
+  window.onclick = function (event) {
+    const navbar = document.querySelector(".navbar");
+    if (!navbar.contains(event.target) && !event.target.matches(".dropbtn")) {
+      navbar.classList.remove("frosted");
+    }
+  };
+</script>

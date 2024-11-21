@@ -1,0 +1,15 @@
+.cobrar-btn img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-inspeccionar-pendiente{
+    background: green;
+    color: white;
+    transition: all 0.5s ease; 
+
+    &:hover{
+        background-color: rgba(15, 196, 54, 0.763);
+        transform: scale(1.09);
+    }
+}

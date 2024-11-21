@@ -1,0 +1,97 @@
+.continer-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login_form{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(88, 75, 45, 0.3);
+    background: #e77d033f; 
+}
+
+.login-logo{
+    width: 140px;
+    height: 120px;
+}
+
+.container-login_formulario{
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-login_formulario input{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container-login_obtenerClave{
+    margin-top: 1rem;
+}
+
+.container-login_btn{
+    width: 250px;
+    height: 36px;
+    background: #e77d03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container-login_btn:hover{
+    background: #d66e02;
+    transform: scale(0.9);
+}
+
+.container-login_form-clave{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(88, 75, 45, 0.3);
+    background-color: rgba(247, 16, 16, 0.315);
+}
+
+.container-login_btn-clave{
+    width: 250px;
+    height: 36px;
+    background: #e72503;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container-login_btn-clave:hover{
+    background: #d61b02;
+    transform: scale(0.9);
+}

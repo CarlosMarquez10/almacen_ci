@@ -1,0 +1,24 @@
+# Dependencias
+node_modules/
+
+# Compilados
+dist/
+build/
+
+# Logs
+*.log
+
+# Ignorar la carpeta src/model/doc
+src/model/doc/
+
+# Ignorar la carpeta src/model/config
+src/model/config/
+
+# Ignorar el archivo src/model/db.js
+src/model/db.js
+
+# Ignorar el archivo .env
+.env
+
+# Ignorar la carpeta src/fotoEmpleado
+src/fotoEmpleado/
