@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        margin: 0 auto 20px;
+      }
+      .profile-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .input-container {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+      }
+
+      .img-consultaEmpleado{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 0px;
+        left: 25px;
+        filter: box-shadow (1px 5px 15px rgba(0, 0, 0, 0.6));
+
+        &:hover{
+            transform: scale(1.1);
+        }
+      }
+
+      input[type="number"] {
+        width: 60%;
+        padding: 10px 10px 10px 40px;
+        font-size: 16px;
+        border: 1px solid #f30202;
+        border-radius: 5px;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .data-container {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <img src="/img/CONSORCIO_CI.png" alt="Logo" class="logo" />
+
+      <!-- Input para número de identificación -->
+      <div class="input-container">
+        <img class="img-consultaEmpleado" src="/img/user.png" alt="" id="btnConsultar">
+        <input
+          type="number"
+          placeholder="Ingrese número de identificación"
+          id="identificacion"
+        />
+      </div>
+
+      <!-- Botón Consultar -->
+      <!-- <button class="button" id="btnConsultar">Consultar</button> -->
+
+      <!-- Contenedor para mostrar datos -->
+      <div class="data-container" id="dataContainer" style="display: none">
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Cargo: <span id="cargo"></span></p>
+        <p>Regional: <span id="regional"></span></p>
+      </div>
+
+      <!-- Botón Continuar -->
+      <a  href="/consultar" class="button" id="btnContinuar" style="display: none">
+        Continuar
+      </a>
+    </div>
+
+    <script>
+      // Ejemplo de cómo interactuar con la vista
+      document
+        .getElementById("btnConsultar")
+        .addEventListener("click", function () {
+          // Simular consulta a base de datos
+          const identificacion =
+            document.getElementById("identificacion").value;
+          console.log(typeof(identificacion))
+          if (parseInt(identificacion) === 1090415914) {
+            // Mostrar datos en el contenedor
+            document.getElementById("nombre").textContent = "Carlos Marquez";
+            document.getElementById("cargo").textContent = "Operativo 1";
+            document.getElementById("regional").textContent = "Cúcuta";
+
+            document.getElementById("dataContainer").style.display = "block";
+            document.getElementById("btnContinuar").style.display =
+              "inline-block";
+          } else {
+            alert("Identificación no encontrada.");
+          }
+        });
+    </script>
+  </body>
+</html>

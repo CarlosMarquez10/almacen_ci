@@ -29,7 +29,7 @@ export const login = async (req, res) => {
     res.cookie('token', token, { httpOnly: true });
 
     // Redirigir al usuario a la página de inicio o dashboard
-    res.redirect('/consultar');
+    res.redirect('/consultarEmpleado');
   } catch (error) {
     console.error(error);
     res.status(500).render('login', { error: 'Error del servidor' });

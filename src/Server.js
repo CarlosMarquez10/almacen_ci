@@ -33,6 +33,10 @@ app.get("/inicio", (rqe, res) => {
   res.render("app");
 });
 
+app.get("/consultarEmpleado/", authenticateToken, (req, res) => {
+  res.render("consultaEmpleado", { user: req.user });
+});
+
 app.get("/consultar/", authenticateToken, (req, res) => {
   res.render("consultar", { user: req.user });
 });
@@ -53,6 +57,18 @@ app.get("/estadisticas/",  authenticateToken, (req, res) => {
   res.render("estadisticas",{user: req.user});
 });
 
+
+// Ruta de para consultar la cedula de los empleados a inspeccionar.
+app.get("/consultaEmpleado", authenticateToken, (req, res) => {
+  res.render("consultaEmpleado", {user: req.user});
+})
+
+// Ruta para la página de login
+app.get("/login", (req, res) => {
+  res.render("login"); // Renderiza la vista "login.ejs"
+});
+
+
 app.get("/salir/", (req, res) => {
   // Eliminar la cookie que contiene el token JWT
   res.clearCookie('token');
@@ -60,10 +76,7 @@ app.get("/salir/", (req, res) => {
   // Redirigir al usuario a la página de login
   res.redirect('/inicio');
 });
-// Ruta para la página de login
-app.get("/login", (req, res) => {
-  res.render("login"); // Renderiza la vista "login.ejs"
-});
+
 
 // Ruta para la página de login
 app.get("/obtenerclave", (req, res) => {
